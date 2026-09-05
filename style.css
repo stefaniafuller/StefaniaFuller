@@ -1,3 +1,6 @@
+body {margin: 0;
+padding: 0;}
+
 header {
 background-color: #4c4b6a;
 text-align: center;
@@ -5,9 +8,11 @@ text-align: center;
 }
  
 #banner {
-width: 1280px;
+
 height: 500px;
 width: 100%;
+
+
 
 }
 img {
@@ -39,8 +44,9 @@ img {
     footer {
         text-align: center;
         background-color: #4c4b6a;
-        height: 80PX;
+        height: 100%;
         width: 100%;
+        
         }
 .Copy {
     text-align: center;
@@ -49,5 +55,35 @@ img {
    
 }
 
+.testimonio1{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.testimonio2{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
 
-           
+h4{
+    width: 18%;
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+button {
+    border: 2px solid #9c78b6;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+a:hover{
+color: red
+}
+
+.quienes{
+    width: 80%
+    margin-left: 40px;
+    font-size: 20px;
+}
