@@ -320,3 +320,18 @@ a:hover {
     font-family: Georgia, 'Times New Roman', Times, serif; 
     background-color: #f1edf5; 
 }
+.oculto {
+display: none;
+}
+
+.texto-testimonio {
+font-size: 40px;
+color: #ffffff;
+font-weight: bold;
+}
+
+.texto-extra {
+    font-size: 40px;
+    color: black;
+    font-weight: bold;
+}
