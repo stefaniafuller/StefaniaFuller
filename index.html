@@ -9,6 +9,7 @@
 <title>CATÁLOGO DE BASIS SPORT</title>
 <link rel="stylesheet" href="style.css">
 <script src="script.js" defer></script>
+
 </head>
 
 <body>
@@ -85,27 +86,56 @@
 </div>
 
 <!-- MÁS SOLICITADO -->
+<section class="carousel-section"></section>
 <section class="seccion-productos">
 <h2>Más Solicitado</h2>
+<div class="carousel-container" id="carousel">
+</section>
+</div>
 
-<div class="productos">
-<article class="producto">
-<img src="img/remera-dryfit-h.webp" alt="Remera Dryfit Basis">
-<figcaption>Remera Dryfit Basis</figcaption>
+<!--Diapositivas-->
+<div class="carousel-slides">
+     <div class="mas-soli">
+    <img src="img/remera-dryfit-h.webp" alt="dryfit-h">
+         <div class="carousel-caption">
+        <figcaption>Remera Dryfit Hombre</figcaption>
+        <p class="Precio">$25.000</p>
+        </div>
 
-<p class="Precio">$14.000</p></article>
-<article class="producto">
-<img src="img/campera-lycra.jpg" alt="Campera Lycra FEM">
-<figcaption>Campera Lycra FEM</figcaption>
 
-<p class="Precio">$25.000</p></article>
-<article class="producto">
+</div>
+    </div>
+    
+         </div>
+
+
+<div class="slide">
+    <div class="mas-soli">
+     <img src="img/campera-lycra.jpg" alt="Campera Lycra FEM">
+             <div class="carousel-caption">
+     <figcaption>Campera Lycra FEM</figcaption>
+
+    <p class="Precio">$25.000</p></article>
+</div>
+     </div>
+           </div>
+
+<div class="slide">
+<article class="mas-solicitado">
+    <div class="mas-soli">
 <img src="img/calza-oxford.webp" alt="Calza Oxford">
 <figcaption>Calza Oxford</figcaption>
 
 <p class="Precio">$20.000</p>
-</article></div></section>
+</div>
+</div>
+</article>
+</section>
 
+<!--Btns de nav-->
+
+<button class="carousel-btn prev" id="prevBtn" aria-label="Imagen anterior">&#171</button>
+<button class="carousel-btn next" id="nextBtn" aria-label="Siguiente imagen">&#187</button>
 <!-- SECCIÓN MUJER -->
 <p class="Destacado">SECCIÓN MUJER</p>
 

@@ -97,7 +97,103 @@ header {
     background-color: #9c78b6;  
     padding-left: 25px;  
 }  
+
+
+
+.carousel-section {
+    margin: 10px 0;
+}
+
+.carousel-container{
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0px 20px #9c78b6;
+    background-color: #4c4b6a;
+
+
+}
+ 
+.carousel-slides {
+position: relative;
+height: 450px;    
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity0.8s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgb(247, 247, 247);
+    color: rgb(207, 84, 84);
+    text-align: center;
+    padding: 15px 20px;
+}
+
+.carousel-caption figcaption {
+    font-size: 1.5rem;
+    margin-bottom: 4px;
+    color: rgb(223, 21, 21);
+}
+
+.carousel-caption p {
+    font-size: 0.95rem;
+    color: #4c4b6a;
+}
+
+.carousel-btn {
+    position: relative;
+    top: 90%;
+    transform: translateY(-0%);
+    background-color: rgb(199, 192, 192);
+    color: aqua;
+    font-size: 24px;
+    padding: 12px  18px;
+    border: 50px;
+    cursor: pointer;
+    z-index: 90;
+    transition: backround-color 0.3s, transform 0.2s;
+}
+.carousel-btn:hover {
+    background-color: #4f06d6;
+    transform: translateY(-50%) scale(1.1);
+    
+}
+.carousel-btn-prev {left: 15px;}
+.carousel-btn-next {right: 15px;}
 /* PRODUCTOS */ 
+.mas-soli{
+     width: 90%;  
+    max-width: 800px;  
+    margin: 40px auto;  
+    text-align: center;  
+}
+
 .seccion-productos {  
     width: 90%;  
     max-width: 800px;  
@@ -109,7 +205,14 @@ header {
     font-size: 30px;  
     margin-bottom: 30px;  
 }  
-/* PRODUCTOS DE A DOS */  
+/* PRODUCTOS DE A DOS */ 
+.mas-soli{
+    display: grid;  
+    grid-template-columns: 1fr 1fr;  
+    gap: 50px;  
+    justify-items: center;  
+}
+
 .productos {  
     display: grid;  
     grid-template-columns: 1fr 1fr;  
@@ -117,11 +220,23 @@ header {
     justify-items: center;  
 }  
 /* TARJETA DE PRODUCTO */  
+.mas-soli{
+    text-align: center;
+    width: 300px;
+}
 .producto {  
     text-align: center;  
     width: 300px;  
 }  
-/* IMAGEN DEL PRODUCTO */  
+/* IMAGEN DEL PRODUCTO */ 
+.mas-soli > img {
+    width: 380px;  
+    height: 380px; 
+    object-fit: cover;  
+    display: block;  
+    margin: auto;
+    
+} 
 .producto > img {  
     width: 300px;  
     height: 300px;  
@@ -130,6 +245,12 @@ header {
     margin: auto;  
 }  
 /* PRODUCTOS CON DOS IMÁGENES */  
+.mas-soli{
+    display: flex;  
+    justify-content: center;  
+    gap: 5px;
+}
+
 .imagenes-dobles {  
     display: flex;  
     justify-content: center;  
