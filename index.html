@@ -1,349 +1,318 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CATÁLOGO DE BASIS SPORT</title>
-<link rel="stylesheet" href="style.css">
-<script src="script.js" defer></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CATÁLOGO DE BASIS SPORT</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
 
-<header>
+  <header>
+    <img src="img/logobasis.webp" alt="Logo Basis Sport">
+  </header>
 
+  <img src="img/catalogobanner.webp" alt="Banner Basis Sport" id="banner">
 
-<img src="img/logobasis.webp" alt="Logo Basis Sport"></header>
+  <!-- NAVEGACIÓN -->
+  <nav class="navbar">
+    <ul class="menu-principal">
+      <li class="dropdown">
+        <a href="#">PRODUCTOS ▾</a>
+        <ul class="submenu">
+          <li class="dropdown-submenu">
+            <a href="#">Mujer ▸</a>
+            <ul class="submenu-2">
+              <li><a href="#Remeras">Remeras</a></li>
+              <li><a href="#Conjuntos">Conjuntos</a></li>
+              <li><a href="#Remeras-Deportivas">Remeras Deportivas</a></li>
+              <li><a href="#Calzas-Cortas">Calzas Cortas</a></li>
+            </ul>
+          </li>
+          <li class="dropdown-submenu">
+            <a href="#">Hombre ▸</a>
+            <ul class="submenu-2">
+              <li><a href="#Remeras-Algodon-H">Remeras de Algodón</a></li>
+              <li><a href="#Shorts-Deportivos">Shorts Deportivos</a></li>
+              <li><a href="#Abrigos">Abrigos</a></li>
+            </ul>
+          </li>
+          <li class="dropdown-submenu">
+            <a href="#">Accesorios ▸</a>
+            <ul class="submenu-2">
+              <li><a href="#Bolso-Mochila">Bolso Mochila</a></li>
+              <li><a href="#Botellas">Botellas</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#Mas-Info">Mas Info</a></li>
+      <li><a href="#Testimonios">Testimonios</a></li>
+      <li><a href="#Quienes-Somos">Quiénes Somos</a></li>
+    </ul>
+  </nav>
 
-<img src="img/catalogobanner.webp" alt="Banner Basis Sport" id="banner">
+  <main>
+    <h1 class="titulo-principal">Bienvenidos al catálogo de Basis Sport, acá encontrarás la indumentaria perfecta para entrenar</h1>
 
+    <!-- VIDEO INTRO -->
+    <div class="intro">
+      <video src="img/intro.mp4" controls></video>
+    </div>
 
-<!-- BARRA DE NAVEGACIÓN -->
+    <!-- CARRUSEL -->
+    <section class="carousel-section">
+      <h2>Más Solicitado</h2>
+      <div class="carousel-container" id="carousel">
+        <div class="carousel-slides">
 
-<nav class="navbar">
+          <div class="slide">
+            <img src="img/remera-dryfit-h.webp" alt="Remera Dryfit Hombre">
+            <div class="carousel-caption">
+              <h3>Remera Dryfit Hombre</h3>
+              <p class="Precio">$25.000</p>
+            </div>
+          </div>
 
-<ul class="menu-principal">
-<li class="dropdown">
-<a href="#">PRODUCTOS ▾</a>
+          <div class="slide">
+            <img src="img/campera-lycra.jpg" alt="Campera Lycra FEM">
+            <div class="carousel-caption">
+              <h3>Campera Lycra FEM</h3>
+              <p class="Precio">$25.000</p>
+            </div>
+          </div>
 
-<ul class="submenu">
-<li class="dropdown-submenu">
-<a href="#">Mujer ▸</a>
+          <div class="slide">
+            <img src="img/calza-oxford.webp" alt="Calza Oxford">
+            <div class="carousel-caption">
+              <h3>Calza Oxford</h3>
+              <p class="Precio">$20.000</p>
+            </div>
+          </div>
 
-<ul class="submenu-2">
-
-<li><a href="#Remeras">Remeras</a></li>
-
-<li><a href="#Conjuntos">Conjuntos</a></li>
-
-
-<li><a href="#Remeras-Deportivas">Remeras Deportivas</a></li>
-
-<li><a href="#Calzas-Cortas">Calzas Cortas</a></li>
-
-</ul></li>
-
-<li class="dropdown-submenu">
-<a href="#">Hombre ▸</a>
-<ul class="submenu-2">
-<li><a href="#Remeras-Algodon-H">Remeras de Algodón</a></li>
-
-<li><a href="#Shorts-Deportivos">Shorts Deportivos</a></li>
-
-<li><a href="#Abrigos">Abrigos</a></li>
-
-</ul></li>
-<li class="dropdown-submenu">
-<a href="#">Accesorios ▸</a>
-
-<ul class="submenu-2">
-
-<li><a href="#Bolso-Mochila">Bolso Mochila</a></li>
-
-<li><a href="#Botellas">Botellas</a></li>
-
-</ul></li></ul></li>
-<li><a href="#Mas-Info">Mas Info</a></li>
-
-<li><a href="#Testimonios">Testimonios</a></li>
-
-<li><a href="#Quienes-Somos">Quiénes Somos</a></li>
-
-
-</ul>
-
-</nav>
-<main>
-<h1>Bienvenidos al catálogo de Basis Sport, acá encontrarás la indumentaria perfecta para entrenar</h1>
-
-<!-- VIDEO INTRO -->
-<div class="intro">
-<video src="img/intro.mp4" controls width="1280" height="450"></video>
-</div>
-
-<!-- MÁS SOLICITADO -->
-<section class="carousel-section"></section>
-<section class="seccion-productos">
-<h2>Más Solicitado</h2>
-<div class="carousel-container" id="carousel">
-</section>
-</div>
-
-<!--Diapositivas-->
-<div class="carousel-slides">
-     <div class="mas-soli">
-    <img src="img/remera-dryfit-h.webp" alt="dryfit-h">
-         <div class="carousel-caption">
-        <figcaption>Remera Dryfit Hombre</figcaption>
-        <p class="Precio">$25.000</p>
         </div>
 
+        <button class="carousel-btn prev" id="prevBtn" aria-label="Imagen anterior">&#171;</button>
+        <button class="carousel-btn next" id="nextBtn" aria-label="Siguiente imagen">&#187;</button>
 
-</div>
+        <div class="carousel-dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN MUJER -->
+    <p class="Destacado">SECCIÓN MUJER</p>
+
+    <section id="Remeras" class="seccion-productos">
+      <h2>Remeras</h2>
+      <div class="productos">
+        <figure class="producto">
+          <img src="img/remera-algodon.webp" alt="Remera Estampada">
+          <figcaption>Remera Estampada</figcaption>
+          <p class="Precio">$14.000</p>
+        </figure>
+        <figure class="producto">
+          <img src="img/remeranevada.webp" alt="Remera Nevada">
+          <figcaption>Remera Nevada</figcaption>
+          <p class="Precio">$18.000</p>
+        </figure>
+      </div>
+    </section>
+
+    <section id="Conjuntos" class="seccion-productos">
+      <h2>Conjuntos</h2>
+      <div class="productos">
+        <figure class="producto">
+          <div class="imagenes-dobles">
+            <img src="img/personaconjunto.webp" alt="Conjunto Amalia">
+            <img src="img/personaconjunto2.webp" alt="Conjunto Amalia">
+          </div>
+          <figcaption>Conjunto Amalia</figcaption>
+          <p class="Precio">$25.000</p>
+        </figure>
+        <figure class="producto">
+          <div class="imagenes-dobles">
+            <img src="img/personairun.webp" alt="Conjunto Irun">
+            <img src="img/conjuntoirun.webp" alt="Conjunto Irun">
+          </div>
+          <figcaption>Conjunto Irun</figcaption>
+          <p class="Precio">$36.000</p>
+        </figure>
+      </div>
+    </section>
+
+    <section id="Remeras-Deportivas" class="seccion-productos">
+      <h2>Remeras Deportivas</h2>
+      <div class="productos producto-unico">
+        <figure class="producto">
+          <img src="img/remera-deportiva.webp" alt="Remera Dryfit Dama">
+          <figcaption>Remera Dryfit Dama</figcaption>
+          <p class="Precio">$16.000</p>
+        </figure>
+      </div>
+    </section>
+
+    <section id="Calzas-Cortas" class="seccion-productos">
+      <h2>Calzas Cortas</h2>
+      <div class="productos">
+        <figure class="producto">
+          <img src="img/calza-corta.webp" alt="Calza Corta Morley">
+          <figcaption>Calza Corta Morley</figcaption>
+          <p class="Precio">$13.500</p>
+        </figure>
+        <figure class="producto">
+          <img src="img/calza-corta-2.webp" alt="Calza Biker">
+          <figcaption>Calza Biker</figcaption>
+          <p class="Precio">$12.000</p>
+        </figure>
+        <figure class="producto">
+          <img src="img/calza-corta-3.webp" alt="Calza Corta Booty">
+          <figcaption>Calza Corta Booty</figcaption>
+          <p class="Precio">$14.000</p>
+        </figure>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section id="Testimonios" class="testimonios">
+      <h2>Testimonios</h2>
+      <img class="testimonio-img" src="img/testimonio1.png" alt="Testimonio 1">
+      <h4>¡La mejor inversion para entrenar! La remera dryfit cumple muy bien y seca rapidisimo</h4>
+      <h3>NICOLAS MOREIRA</h3>
+
+      <img class="testimonio-img" src="img/testimonio2.jpg" alt="Testimonio 2">
+      <h4>¡Comodidad total! Hice mi entrenamiento completo con este conjunto y fue una muy buena inversion.</h4>
+      <h3>VALE DESCALZO</h3>
+
+      <p class="oculto texto-testimonio">En Basis Sport buscamos ofrecer productos cómodos y de buena calidad para acompañar tus entrenamientos.</p>
+      <button class="boton-ver-mas">Ver más</button>
+    </section>
+
+    <!-- SECCIÓN HOMBRE -->
+    <p class="Destacado">SECCIÓN HOMBRE</p>
+
+    <section id="Remeras-Algodon-H" class="seccion-productos">
+      <h2>Remeras de Algodón</h2>
+      <div class="productos">
+        <figure class="producto">
+          <img src="img/remera-algodon-h-2.webp" alt="Remera Urbana">
+          <figcaption>Remera Urbana</figcaption>
+          <p class="Precio">$18.000</p>
+        </figure>
+        <figure class="producto">
+          <img src="img/remera-algodon-h.webp" alt="Remera De Algodón">
+          <figcaption>Remera De Algodón</figcaption>
+          <p class="Precio">$20.000</p>
+        </figure>
+      </div>
+    </section>
+
+    <section id="Shorts-Deportivos" class="seccion-productos">
+      <h2>Shorts Deportivos</h2>
+      <div class="productos">
+        <figure class="producto">
+          <img src="img/short-calza.webp" alt="Short Con Calza">
+          <figcaption>Short Con Calza</figcaption>
+          <p class="Precio">$25.000</p>
+        </figure>
+        <figure class="producto">
+          <img src="img/short-algodon.webp" alt="Short Deportivo De Algodón">
+          <figcaption>Short Deportivo De Algodón</figcaption>
+          <p class="Precio">$15.000</p>
+        </figure>
+      </div>
+    </section>
+
+    <section id="Abrigos" class="seccion-productos">
+      <h2>Abrigos</h2>
+      <div class="productos">
+        <figure class="producto">
+          <img src="img/chaleco.webp" alt="Chaleco TNF">
+          <figcaption>Chaleco TNF</figcaption>
+          <p class="Precio">$35.000</p>
+        </figure>
+        <figure class="producto">
+          <img src="img/campera-1.webp" alt="Campera VLREN Unisex">
+          <figcaption>Campera VLREN Unisex</figcaption>
+          <p class="Precio">$40.000</p>
+        </figure>
+        <figure class="producto">
+          <img src="img/rompevientos.webp" alt="Rompevientos">
+          <figcaption>Rompevientos</figcaption>
+          <p class="Precio">$40.000</p>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ACCESORIOS -->
+    <p class="Destacado">ACCESORIOS</p>
+
+    <section id="Bolso-Mochila" class="seccion-productos">
+      <h2>Bolso Mochila</h2>
+      <div class="productos producto-unico">
+        <figure class="producto">
+          <img class="bolso" src="img/bolso-mochila.webp" alt="Bolso Mochila">
+          <figcaption>Bolso Mochila</figcaption>
+          <p class="Precio">$40.000</p>
+        </figure>
+      </div>
+    </section>
+
+    <div class="fondo-video-bolso">
+      <video class="video-producto" controls>
+        <source src="img/bolsomochila.mp4" type="video/mp4">
+      </video>
     </div>
-    
-         </div>
 
+    <section id="Botellas" class="seccion-productos">
+      <h2>Botellas</h2>
+      <div class="productos producto-unico">
+        <figure class="producto">
+          <img src="img/botellas.webp" alt="Botellas">
+          <figcaption>Botellas</figcaption>
+          <p class="Precio">$15.500</p>
+        </figure>
+      </div>
+    </section>
 
-<div class="slide">
-    <div class="mas-soli">
-     <img src="img/campera-lycra.jpg" alt="Campera Lycra FEM">
-             <div class="carousel-caption">
-     <figcaption>Campera Lycra FEM</figcaption>
+    <!-- QUIÉNES SOMOS -->
+    <section id="Quienes-Somos">
+      <div class="quienes">
+        <img src="img/quienes-somos.png" alt="Quiénes Somos">
+      </div>
+      <p class="oculto texto-extra">Basis Sport es un espacio dedicado a la indumentaria y los accesorios deportivos. Buscamos ofrecer productos cómodos y funcionales para acompañar a nuestros clientes durante sus entrenamientos y actividades diarias.</p>
+      <button class="boton-ver-mas">Ver más</button>
+    </section>
 
-    <p class="Precio">$25.000</p></article>
-</div>
-     </div>
-           </div>
+    <!-- MÁS INFO -->
+    <section id="Mas-Info">
+      <h3>Mas Info</h3>
+      <p class="oculto texto-extra">Para realizar consultas sobre productos, talles, colores y disponibilidad podés comunicarte con Basis Sport. También contamos con opciones de retiro y entrega según la ubicación del cliente.</p>
+      <button class="boton-ver-mas">Ver más</button>
+    </section>
+  </main>
 
-<div class="slide">
-<article class="mas-solicitado">
-    <div class="mas-soli">
-<img src="img/calza-oxford.webp" alt="Calza Oxford">
-<figcaption>Calza Oxford</figcaption>
-
-<p class="Precio">$20.000</p>
-</div>
-</div>
-</article>
-</section>
-
-<!--Btns de nav-->
-
-<button class="carousel-btn prev" id="prevBtn" aria-label="Imagen anterior">&#171</button>
-<button class="carousel-btn next" id="nextBtn" aria-label="Siguiente imagen">&#187</button>
-<!-- SECCIÓN MUJER -->
-<p class="Destacado">SECCIÓN MUJER</p>
-
-<!-- REMERAS -->
-<section id="Remeras" class="seccion-productos">
-<h2>Remeras</h2>
-
-<div class="productos">
-<article class="producto">
-<img src="img/remera-algodon.webp" alt="Remera Estampada">
-<figcaption>Remera Estampada</figcaption>
-
-<p class="Precio">$14.000</p>
-
-</article>
-<article class="producto">
-<img src="img/remeranevada.webp" alt="Remera Nevada">
-<figcaption>Remera Nevada</figcaption>
-
-<p class="Precio">$18.000</p></article></div></section>
-
-<!-- CONJUNTOS -->
-<section id="Conjuntos" class="seccion-productos">
-<h2>Conjuntos</h2>
-
-<div class="productos">
-<article class="producto">
-<div class="imagenes-dobles">
-<img src="img/personaconjunto.webp" alt="Conjunto Amalia">
-<img src="img/personaconjunto2.webp" alt="Conjunto Amalia">
-</div>
-<figcaption>Conjunto Amalia</figcaption>
-
-<p class="Precio">$25.000</p></article>
-<article class="producto">
-<div class="imagenes-dobles">
-<img src="img/personairun.webp" alt="Conjunto Irun">
-<img src="img/conjuntoirun.webp" alt="Conjunto Irun">
-</div>
-<figcaption>Conjunto Irun</figcaption>
-
-<p class="Precio">$36.000</p></article></div></section>
-
-<!-- REMERAS DEPORTIVAS -->
-<section id="Remeras-Deportivas" class="seccion-productos">
-<h2>Remeras Deportivas</h2>
-
-<div class="productos">
-<article class="producto">
-<img src="img/remera-deportiva.webp" alt="Remera Dryfit Dama">
-<figcaption>Remera Dryfit Dama</figcaption>
-
-<p class="Precio">$16.000</p></article></div></section>
-
-<!-- CALZAS CORTAS -->
-<section id="Calzas-Cortas" class="seccion-productos">
-<h2>Calzas Cortas</h2>
-
-<div class="productos">
-<article class="producto">
-<img src="img/calza-corta.webp" alt="Calza Corta Morley">
-<figcaption>Calza Corta Morley</figcaption>
-
-<p class="Precio">$13.500</p></article>
-<article class="producto">
-<img src="img/calza-corta-2.webp" alt="Calza Biker">
-<figcaption>Calza Biker</figcaption>
-
-<p class="Precio">$12.000</p>
-</article>
-<article class="producto">
-<img src="img/calza-corta-3.webp" alt="Calza Corta Booty">
-<figcaption>Calza Corta Booty</figcaption>
-
-<p class="Precio">$14.000</p></article></div></section>
-
-<!-- TESTIMONIOS -->
-<div class="testimonios">
-<section id="Testimonios">
-<h2>Testimonios</h2>
-<img class="testimonio1" src="img/testimonio1.png" alt="Testimonio 1">
-<h4>¡La mejor inversion para entrenar! La remera dryfit cumple muy bien y seca rapidismo</h4>
-<h3>NICOLAS MOREIRA</h3>
-<img class="testimonio2" src="img/testimonio2.jpg" alt="Testimonio 2">
-<h4>¡Comodidad total! Hice mi entrenamiento completo con este conjunto y fue una muy buena inversion.</h4>
-<h3>VALE DESCALZO</h3>
-<p class="oculto texto-testimonio">En Basis Sport buscamos ofrecer productos cómodos y de buena calidad para acompañar tus entrenamientos.</p>
-<button class="boton-ver-mas">Ver más</button></section></div>
-
-<!-- SECCIÓN HOMBRE -->
-<p class="Destacado">SECCIÓN HOMBRE</p>
-
-<!-- REMERAS DE ALGODÓN -->
-<section id="Remeras-Algodon-H" class="seccion-productos">
-<h2>Remeras de Algodón</h2>
-<div class="productos">
-<article class="producto">
-<img src="img/remera-algodon-h-2.webp" alt="Remera Urbana">
-<figcaption>Remera Urbana</figcaption>
-
-<p class="Precio">$18.000</p></article>
-<article class="producto">
-<img src="img/remera-algodon-h.webp" alt="Remera De Algodón">
-<figcaption>Remera De Algodón</figcaption>
-
-<p class="Precio">$20.000</p>
-</article></div></section>
-
-<!-- SHORTS DEPORTIVOS -->
-<section id="Shorts-Deportivos" class="seccion-productos">
-<h2>Shorts Deportivos</h2>
-<div class="productos">
-<article class="producto">
-<img src="img/short-calza.webp" alt="Short Con Calza">
-<figcaption>Short Con Calza</figcaption>
-
-<p class="Precio">$25.000</p></article>
-<article class="producto">
-<img src="img/short-algodon.webp" alt="Short Deportivo De Algodón">
-<figcaption>Short Deportivo De Algodón</figcaption>
-
-<p class="Precio">$15.000</p>
-</article></div></section>
-
-<!-- ABRIGOS -->
-<section id="Abrigos" class="seccion-productos">
-<h2>Abrigos</h2>
-<div class="productos">
-<article class="producto">
-<img src="img/chaleco.webp" alt="Chaleco TNF">
-<figcaption>Chaleco TNF</figcaption>
-
-<p class="Precio">$35.000</p>
-
-</article>
-<article class="producto">
-<img src="img/campera-1.webp" alt="Campera VLREN Unisex">
-<figcaption>Campera VLREN Unisex</figcaption>
-
-<p class="Precio">$40.000</p></article>
-<article class="producto">
-<img src="img/rompevientos.webp" alt="Rompevientos">
-<figcaption>Rompevientos</figcaption>
-
-<p class="Precio">$40.000</p>
-
-</article></div></section>
-
-<!-- ACCESORIOS -->
-<p class="Destacado">ACCESORIOS</p>
-
-<!-- BOLSO MOCHILA -->
-<section id="Bolso-Mochila" class="seccion-productos">
-<h2>Bolso Mochila</h2>
-<div class="productos">
-<article class="producto">
-<img class="bolso" src="img/bolso-mochila.webp" alt="Bolso Mochila">
-<figcaption>Bolso Mochila</figcaption>
-<p class="Precio">$40.000</p>
-</article></div></section>
-
-<!-- FONDO DEL VIDEO DEL BOLSO -->
-<div class="fondo-video-bolso">
-<video class="video-producto" controls width="1280" height="450">
-<source src="img/bolsomochila.mp4" type="video/mp4"></video></div>
-
-<!-- BOTELLAS -->
-<section id="Botellas" class="seccion-productos">
-<h2>Botellas</h2>
-
-<div class="productos">
-
-<article class="producto">
-<img src="img/botellas.webp" alt="Botellas">
-<figcaption>Botellas</figcaption>
-
-<p class="Precio">$15.500</p>
-</article></div></section>
-
-<!-- QUIÉNES SOMOS -->
-<section id="Quienes-Somos">
-<div class="quienes">
-<img src="img/quienes-somos.png" alt="Quiénes Somos">
-</div>
-<p class="oculto texto-extra">Basis Sport es un espacio dedicado a la indumentaria y los accesorios deportivos. Buscamos ofrecer productos cómodos y funcionales para acompañar a nuestros clientes durante sus entrenamientos y actividades diarias.</p>
-<button class="boton-ver-mas">Ver más</button>
-</section>
-
-<!-- MÁS INFO -->
-<section id="Mas-Info">
-<h3>Mas Info</h3>
-<p class="oculto texto-extra">Para realizar consultas sobre productos, talles, colores y disponibilidad podés comunicarte con Basis Sport. También contamos con opciones de retiro y entrega según la ubicación del cliente.</p>
-<button class="boton-ver-mas">Ver más</button></section>
-</main>
-
-<!-- FOOTER -->
-<footer>
-<button><details>
-<summary>NUESTRAS REDES</summary>
-<a href="https://www.instagram.com/basissportok/?next=%2F&hl=es">Instagram</a>
-</details></button><button><details>
-<summary>HACE TU COMPRA</summary>
-<a href="https://www.facebook.com/marketplace/profile/100001506048619/?locale=es_LA">Marketplace</a></details></button>
-<p class="Copy">&copy; Copyright de Basis Sport - 2026 - Todos los derechos reservados</p>
-
-</footer>
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-botones">
+      <details>
+        <summary>NUESTRAS REDES</summary>
+        <a href="https://www.instagram.com/basissportok/?next=%2F&hl=es" target="_blank">Instagram</a>
+      </details>
+      <details>
+        <summary>HACE TU COMPRA</summary>
+        <a href="https://www.facebook.com/marketplace/profile/100001506048619/?locale=es_LA" target="_blank">Marketplace</a>
+      </details>
+    </div>
+    <p class="Copy">&copy; Copyright de Basis Sport - 2026 - Todos los derechos reservados</p>
+  </footer>
 
 </body>
 
 </html>
-
