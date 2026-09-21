@@ -81,3 +81,25 @@ boton.addEventListener("click", function () {
     behavior: "smooth"
   });
 });
+
+const texto = document.getElementById("texto");
+const disminuir = document.getElementById("disminuir");
+const normal = document.getElementById("normal");
+const aumentar = document.getElementById("aumentar");
+let tamaño = 16;
+aumentar.addEventListener("click", function () {
+if (tamaño < 30) {
+tamaño = tamaño + 2;
+texto.style.fontSize = tamaño + "px";
+}
+});
+disminuir.addEventListener("click", function () {
+if (tamaño > 10) {
+tamaño = tamaño - 2;
+texto.style.fontSize = tamaño + "px";
+}
+});
+normal.addEventListener("click", function () {
+tamaño = 16;
+texto.style.fontSize = tamaño + "px";
+});

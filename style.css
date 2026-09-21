@@ -25,7 +25,7 @@ header img {
 /* BANNER */
 #banner {
   width: 100%;
-  max-height: 680px;
+  height: 485px;
   object-fit: cover;
   object-position: center;
   display: block;
@@ -95,8 +95,8 @@ header img {
 }
 
 /* TITULO Y VIDEOS */
-.titulo-principal {
-  text-align: center;
+h1 {
+ text-align: center;
   padding: 0 15px;
 }
 
@@ -374,3 +374,9 @@ cursor: pointer;
 font-size: 16px;
 
 }
+
+/* TAMAÑO DE LETRA */
+.button disminuir {
+   margin-top: 15px;
+}
+
