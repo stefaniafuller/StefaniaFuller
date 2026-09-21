@@ -64,3 +64,20 @@ if (prevBtn) prevBtn.addEventListener('click', prevSlide);
 
 // Inicializar carrusel
 showSlide(currentSlide);
+
+const boton = document.getElementById("volverArriba");
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 8000) {
+    boton.style.display = "block";
+  } else {
+    boton.style.display = "none";
+  }
+});
+
+boton.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});

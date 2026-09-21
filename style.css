@@ -106,7 +106,7 @@ header img {
 }
 
 video {
-  max-width: 90%;
+  max-width: 20%;
   height: auto;
 }
 
@@ -310,6 +310,14 @@ button, summary {
   font-weight: bold;
 }
 
+.redicc {
+  color: #ffffff;
+}
+
+.redicc:hover{
+  color:red
+}
+
 .boton-ver-mas {
   margin-top: 15px;
 }
@@ -321,7 +329,7 @@ button, summary {
 
 .quienes img {
   width: 100%;
-  max-height: 400px;
+  max-height: 600px;
   object-fit: cover;
 }
 
@@ -349,4 +357,20 @@ footer {
 .Copy {
   font-size: 16px;
   color: #9c78b6;
+}
+
+/* VOLVER ARRIBA */
+
+#volverArriba{
+  color: #ffffff;
+  background-color:#9c78b6;
+  position: fixed;
+bottom: 20px;
+right: 20px;
+padding: 12px 18px;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+font-size: 16px;
+
 }
