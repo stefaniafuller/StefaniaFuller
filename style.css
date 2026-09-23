@@ -203,20 +203,14 @@ video {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   justify-items: center;
-  padding: 0;
-  margin: 0;
-}
-
-.producto-unico {
-  display: flex;
-  justify-content: center;
+  
 }
 
 .producto {
-  text-align: center;
-  margin: 0;
+  
   width: 100%;
   max-width: 300px;
+  margin: 0;
 }
 
 .producto img {
@@ -378,5 +372,50 @@ font-size: 16px;
 /* TAMAÑO DE LETRA */
 .button disminuir {
    margin-top: 15px;
+}
+
+
+body {
+  font-family: Arial;
+}
+
+.contenedor {
+  width: 400px;
+  margin: 50px auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* CONSULTAS O DUDAS */
+
+.consulta {
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-decoration: underline;
+}
+
+/* 3 TEXTOS BOTON */
+
+.contenedor-anuncio {
+  max-width: 600px; 
+  text-align: center;
+}
+
+#textoInformativo {
+  font-size: 20px; 
+  margin-bottom: 15px;
+}
+
+/* CAMBIAR 3 TEXTOS */
+.tres-textos {
+  color: #ffffff;
+  background-color: #4c4b6a;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+  margin: 20px 0;
 }
 

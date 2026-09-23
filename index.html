@@ -56,7 +56,8 @@
   </nav>
 
   <main>
-    <div>
+    <!--TAMAÑO TEXTO-->
+    <div style="text-align: center; margin-top: 15px;">
       <button id="disminuir">A-</button>
      <button id="normal">A</button>
      <button id="aumentar">A+</button>
@@ -255,6 +256,12 @@
       </div>
     </section>
 
+    <!--3 TEXTOS-->
+    <div class="tres-textos">
+  <h1 id="textoInformativo">💵 ACEPTAMOS TODOS LOS MEDIOS DE PAGO 💵</h1>
+  <button id="botonCambiar">Cambiar texto</button>
+</div>
+
     <!-- ACCESORIOS -->
     <p class="Destacado">ACCESORIOS</p>
 
@@ -307,6 +314,24 @@
     </section>
   </main>
 
+<h2 class="consulta">REALIZA TU CONSULTA O DUDA</h2>
+
+ <div class="contenedor">
+  <form id="formulario">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" placeholder="Escribí tu nombre">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="ejemplo@gmail.com">
+
+    <label for="mensaje">Mensaje:</label>
+    <textarea id="mensaje" placeholder="Escribí tu mensaje"></textarea>
+
+    <button type="submit">Enviar</button>
+
+    <p id="resultado"></p>
+  </form>
+</div>
 
   <!-- FOOTER -->
   <footer>

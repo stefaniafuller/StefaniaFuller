@@ -1,4 +1,4 @@
-/* BOTONES VER MÁS */
+//BOTONES VER MÁS 
 const botonesVerMas = document.querySelectorAll(".boton-ver-mas");
 
 botonesVerMas.forEach(function (boton) {
@@ -15,7 +15,7 @@ botonesVerMas.forEach(function (boton) {
     });
 });
 
-/* CARRUSEL */
+// CARRUSEL 
 const slides = document.querySelectorAll('.slide');
 const dots = document.querySelectorAll('.dot');
 const prevBtn = document.getElementById('prevBtn');
@@ -82,6 +82,8 @@ boton.addEventListener("click", function () {
   });
 });
 
+// AUMENT O DISMIN LETRA
+
 const texto = document.getElementById("texto");
 const disminuir = document.getElementById("disminuir");
 const normal = document.getElementById("normal");
@@ -103,3 +105,46 @@ normal.addEventListener("click", function () {
 tamaño = 16;
 texto.style.fontSize = tamaño + "px";
 });
+
+// FORMULARIO 
+
+const formulario = document.getElementById("formulario");
+
+formulario.addEventListener("submit", function(event) {
+  const nombre = document.getElementById("nombre").value;
+  const email = document.getElementById("email").value;
+  const mensaje = document.getElementById("mensaje").value;
+  const resultado = document.getElementById("resultado");
+
+  if (nombre.length < 3) {
+    event.preventDefault();
+    resultado.textContent = "El nombre debe tener al menos 3 caracteres.";
+  } else if (mensaje.trim() === "") {
+    event.preventDefault();
+    resultado.textContent = "El mensaje no puede estar vacío.";
+  } else {
+    event.preventDefault();
+    resultado.textContent = "Formulario enviado correctamente!";
+  }
+});
+
+// CAMBIAR 3 TEXTOS
+const botonAnuncio = document.getElementById("botonCambiar");
+const textoAnuncio = document.getElementById("textoInformativo");
+
+let contador = 0;
+
+if (botonAnuncio && textoAnuncio) {
+  botonAnuncio.addEventListener("click", function () {
+    contador++;
+
+    if (contador === 1) {
+      textoAnuncio.textContent = "💳 HASTA 3 CUOTAS SIN INTERÉS CON TARJETAS BANCARIZADAS 💳";
+    } else if (contador === 2) {
+      textoAnuncio.textContent = "🚚 CONTAMOS CON ENVÍOS DENTRO DE CÓRDOBA 🚚";
+    } else if (contador === 3) {
+      textoAnuncio.textContent = "💵 ACEPTAMOS TODO MEDIO DE PAGO 💵";
+      contador = 0; 
+    }
+  });
+}
