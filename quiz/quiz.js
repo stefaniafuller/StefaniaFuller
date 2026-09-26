@@ -1,10 +1,9 @@
 const botonCorregir = document.getElementById("botonCorregir");
 const resultado = document.getElementById("resultado");
 
-botonCorregir.addEventListener("click", function(){
+botonCorregir.addEventListener("click", function() {
     
     let puntos = 0;
-
 
     const respuesta1 = document.querySelector('input[name="pregunta1"]:checked');
     const respuesta2 = document.querySelector('input[name="pregunta2"]:checked');
@@ -22,6 +21,6 @@ botonCorregir.addEventListener("click", function(){
         puntos++;
     }
 
-    resultado.textContent = "Obtuviste" + puntos + "de 3 puntos";
+    resultado.textContent = "Obtuviste " + puntos + " de 3 puntos.";
 });
 
