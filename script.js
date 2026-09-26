@@ -1,16 +1,15 @@
 //BOTONES VER MÁS 
 const botonesVerMas = document.querySelectorAll(".boton-ver-mas");
-
 botonesVerMas.forEach(function (boton) {
     boton.addEventListener("click", function () {
         const infoExtra = boton.previousElementSibling;
 
         if (infoExtra.classList.contains("oculto")) {
-            infoExtra.classList.remove("oculto");
-            boton.textContent = "Ver menos";
+          infoExtra.classList.remove("oculto");
+          boton.textContent = "Ver menos";
         } else {
-            infoExtra.classList.add("oculto");
-            boton.textContent = "Ver más";
+          infoExtra.classList.add("oculto");
+          boton.textContent = "Ver más";
         }
     });
 });
@@ -21,7 +20,6 @@ const dots = document.querySelectorAll('.dot');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 const carouselContainer = document.getElementById('carousel');
-
 let currentSlide = 0;
 let autoSlideInterval;
 
@@ -64,9 +62,7 @@ if (prevBtn) prevBtn.addEventListener('click', prevSlide);
 
 // Inicializar carrusel
 showSlide(currentSlide);
-
 const boton = document.getElementById("volverArriba");
-
 window.addEventListener("scroll", function () {
   if (window.scrollY > 8000) {
     boton.style.display = "block";
@@ -74,7 +70,6 @@ window.addEventListener("scroll", function () {
     boton.style.display = "none";
   }
 });
-
 boton.addEventListener("click", function () {
   window.scrollTo({
     top: 0,
@@ -107,15 +102,12 @@ texto.style.fontSize = tamaño + "px";
 });
 
 // FORMULARIO 
-
 const formulario = document.getElementById("formulario");
-
 formulario.addEventListener("submit", function(event) {
   const nombre = document.getElementById("nombre").value;
   const email = document.getElementById("email").value;
   const mensaje = document.getElementById("mensaje").value;
   const resultado = document.getElementById("resultado");
-
   if (nombre.length < 3) {
     event.preventDefault();
     resultado.textContent = "El nombre debe tener al menos 3 caracteres.";
@@ -131,20 +123,33 @@ formulario.addEventListener("submit", function(event) {
 // CAMBIAR 3 TEXTOS
 const botonAnuncio = document.getElementById("botonCambiar");
 const textoAnuncio = document.getElementById("textoInformativo");
-
 let contador = 0;
-
 if (botonAnuncio && textoAnuncio) {
   botonAnuncio.addEventListener("click", function () {
     contador++;
-
     if (contador === 1) {
       textoAnuncio.textContent = "💳 HASTA 3 CUOTAS SIN INTERÉS CON TARJETAS BANCARIZADAS 💳";
     } else if (contador === 2) {
       textoAnuncio.textContent = "🚚 CONTAMOS CON ENVÍOS DENTRO DE CÓRDOBA 🚚";
     } else if (contador === 3) {
-      textoAnuncio.textContent = "💵 ACEPTAMOS TODO MEDIO DE PAGO 💵";
+      textoAnuncio.textContent = "💵 ACEPTAMOS TODOS LOS MEDIOS DE PAGO 💵";
       contador = 0; 
     }
   });
 }
+
+// MODO OSCURO O CLARO
+const toggleBtn = document.getElementById('theme-toggle');
+toggleBtn.addEventListener("click", function(){ 
+document.body.classList.toggle("darkMode");
+});
+
+toggleBtn.addEventListener("click", function() {
+
+document.body.classList.toggle("dark");
+if (document.body.classList.contains("dark")) {
+
+botonTema.textContent = "Cambiar a Modo Claro"; }
+else { botonTema.textContent = " Cambiar a Modo Oscuro"; }
+
+});

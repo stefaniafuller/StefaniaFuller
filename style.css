@@ -1,9 +1,24 @@
+/* MODO CLARO POR DEFECTO */
+:root {
+--bg-color: #f0f8ff;
+--text-color: #000;
+--color-principal: #9c78b6;
+--text-testimonio: #ffffff;
+--header-bg: #4c4b6a;
+
+
+}
+
 /* ESTILOS GENERALES */
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
   font-family: Arial, sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  
 }
 
 header, .navbar, footer, .testimonios, .fondo-video-bolso {
@@ -43,7 +58,7 @@ header img {
 
 .menu-principal a {
   display: block;
-  color: #ffffff;
+  color:var(--color-fondo);
   text-decoration: none;
   padding: 18px 20px;
   font-weight: bold;
@@ -52,7 +67,7 @@ header img {
 .menu-principal a:hover,
 .submenu li a:hover,
 .submenu-2 li a:hover {
-  background-color: #9c78b6;
+  background-color: var(--color-principal);
 }
 
 .dropdown, .dropdown-submenu {
@@ -149,7 +164,7 @@ video {
   bottom: 0;
   width: 100%;
   background: rgba(0, 0, 0, 0.6);
-  color: #ffffff;
+  color: var(--color-fondo);
   padding: 15px 0;
 }
 
@@ -168,7 +183,7 @@ video {
   top: 50%;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  color: var(--color-fondo);
   font-size: 24px;
   padding: 12px 18px;
   border: none;
@@ -232,7 +247,7 @@ video {
 
 figcaption {
   font-family: 'Montserrat', sans-serif;
-  color: #9c78b6;
+  color: var(--color-principal);
   font-size: 18px;
   font-weight: bold;
   margin-top: 15px;
@@ -252,8 +267,8 @@ figcaption {
   font-weight: bold;
   font-size: 30px;
   font-family: Georgia, serif;
-  background-color: #f1edf5;
-  border: 2px solid #9c78b6;
+  background-color: var(--color-fondo);
+  border: 2px solid var(--color-principal);
   padding: 10px 20px;
   margin: 50px auto;
   border-radius: 10px;
@@ -264,13 +279,13 @@ figcaption {
 .testimonios {
   text-align: center;
   padding: 30px 15px;
-  color: white;
+  color: var(--color-fondo);
 }
 
 .testimonio-img {
   display: block;
   margin: 15px auto;
-  box-shadow: 0 4px 10px #9c78b6;
+  box-shadow: 0 4px 10px var(--color-principal);
   width: 180px;
   height: 180px;
   border-radius: 50%;
@@ -296,16 +311,16 @@ figcaption {
 
 /* BOTONES Y FOOTER */
 button, summary {
-  border: 2px solid #9c78b6;
+  border: 2px solid var(--color-principal);
   border-radius: 10px;
   padding: 10px 20px;
-  background-color: #ffffff;
+  background-color: var(--color-fondo);
   cursor: pointer;
   font-weight: bold;
 }
 
 .redicc {
-  color: #ffffff;
+  color: var(--color-fondo);
 }
 
 .redicc:hover{
@@ -330,10 +345,10 @@ button, summary {
 #Mas-Info h3 {
   display: inline-block;
   padding: 10px 20px;
-  border: 2px solid #9c78b6;
+  border: 2px solid var(--color-principal);
   border-radius: 10px;
   font-size: 28px;
-  background-color: #f1edf5;
+  background-color: var(--color-fondo);
 }
 
 footer {
@@ -350,14 +365,14 @@ footer {
 
 .Copy {
   font-size: 16px;
-  color: #9c78b6;
+  color: var(--color-principal);
 }
 
 /* VOLVER ARRIBA */
 
 #volverArriba{
-  color: #ffffff;
-  background-color:#9c78b6;
+  color:var(--color-fondo);
+  background-color:var(--color-principal);
   position: fixed;
 bottom: 20px;
 right: 20px;
@@ -411,11 +426,26 @@ form {
 
 /* CAMBIAR 3 TEXTOS */
 .tres-textos {
-  color: #ffffff;
+  color: var(--color-fondo);
   background-color: #4c4b6a;
   padding: 20px 0;
   text-align: center;
   width: 100%;
   margin: 20px 0;
 }
+
+:root {
+  --color-principal: #9c78b6;
+  --color-fondo: #ffffff;
+}
+
+/* MODO OSCURO */
+
+body .dark-mode{
+  --bg-color: #4c4b6a;
+  --text-color: #ffffff;
+  --buton-border: #9c78b6;
+
+}
+
 
