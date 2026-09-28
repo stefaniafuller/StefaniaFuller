@@ -15,114 +15,121 @@
     <img src="img/logobasis.webp" alt="Logo Basis Sport">
   </header>
 
-  <img src="img/catalogobanner.webp" alt="Banner Basis Sport" id="banner">
+  <section class="portada">
+    <div class="portada-contenido">
+      <h2>Explora la indumentaria que tenemos para vos</h2>
+      <p>SIEMPRE EN MOVIMIENTO CON BASIS SPORT</p>
+    </div>
+    </div>
+  </section>
 
   <!-- NAVEGACIÓN -->
-  <nav class="navbar">
-    <ul class="menu-principal">
-      <li class="dropdown">
-        <a href="#">PRODUCTOS ▾</a>
-        <ul class="submenu">
-          <li class="dropdown-submenu">
-            <a href="#">Mujer ▸</a>
-            <ul class="submenu-2">
-              <li><a href="#Remeras">Remeras</a></li>
-              <li><a href="#Conjuntos">Conjuntos</a></li>
-              <li><a href="#Remeras-Deportivas">Remeras Deportivas</a></li>
-              <li><a href="#Calzas-Cortas">Calzas Cortas</a></li>
+<nav class="navbar">
+  <ul class="menu-principal">
+    <li class="dropdown">
+      <a href="#">PRODUCTOS ▾</a>
+      <ul class="submenu">
+        <li class="dropdown-submenu">
+          <a href="#">Mujer ▸</a>
+          <ul class="submenu-2">
+          <li><a href="#Remeras">Remeras</a></li>
+            <li><a href="#Conjuntos">Conjuntos</a></li>
+            <li><a href="#Remeras-Deportivas">Remeras Deportivas</a></li>
+            <li><a href="#Calzas-Cortas">Calzas Cortas</a></li>
             </ul>
-          </li>
-          <li class="dropdown-submenu">
-            <a href="#">Hombre ▸</a>
-            <ul class="submenu-2">
-              <li><a href="#Remeras-Algodon-H">Remeras de Algodón</a></li>
-              <li><a href="#Shorts-Deportivos">Shorts Deportivos</a></li>
-              <li><a href="#Abrigos">Abrigos</a></li>
+    </li>
+<li class="dropdown-submenu">
+        <a href="#">Hombre ▸</a>
+          <ul class="submenu-2">
+            <li><a href="#Remeras-Algodon-H">Remeras de Algodón</a></li>
+            <li><a href="#Shorts-Deportivos">Shorts Deportivos</a></li>
+            <li><a href="#Abrigos">Abrigos</a></li>
             </ul>
-          </li>
-          <li class="dropdown-submenu">
-            <a href="#">Accesorios ▸</a>
-            <ul class="submenu-2">
-              <li><a href="#Bolso-Mochila">Bolso Mochila</a></li>
-              <li><a href="#Botellas">Botellas</a></li>
-            </ul>
-          </li>
+        </li>
+<li class="dropdown-submenu">
+        <a href="#">Accesorios ▸</a>
+        <ul class="submenu-2">
+        <li><a href="#Bolso-Mochila">Bolso Mochila</a></li>
+        <li><a href="#Botellas">Botellas</a></li>
         </ul>
-      </li>
+        </li>
+        </ul>
+    </li>
       <li><a href="#Mas-Info">Mas Info</a></li>
       <li><a href="#Testimonios">Testimonios</a></li>
       <li><a href="#Quienes-Somos">Quiénes Somos</a></li>
     </ul>
   </nav>
 
-  <main>
+  
+<main>
     
 
-    <!--TAMAÑO TEXTO Y MODO OSCURO-->
-    <div style="text-align: center; margin-top: 15px;">
-      <button id="disminuir">A-</button>
-      <button id="normal">A</button>
-      <button id="aumentar">A+</button>
-      <button id="theme-toggle">Cambiar a Modo 🌑</button>
-    </div>
+<!--TAMAÑO TEXTO Y MODO OSCURO-->
+  <div style="text-align: center; margin-top: 15px;">
+  <button id="disminuir">A-</button>
+  <button id="normal">A</button>
+  <button id="aumentar">A+</button>
+  <button id="theme-toggle">Cambiar a Modo 🌑</button>
+</div>
 
-    <h1 id="texto">Bienvenidos al catálogo de Basis Sport, acá encontrarás la indumentaria perfecta para entrenar</h1>
+<h1 id="texto">Bienvenidos al catálogo de Basis Sport, acá encontrarás la indumentaria perfecta para entrenar</h1>
 
-    <!-- VIDEO INTRO -->
-    <div class="intro">
-      <video src="img/intro.mp4" controls></video>
-    </div>
+<!-- VIDEO INTRO -->
+  <div class="intro">
+    <video src="img/intro.mp4" controls></video>
+  </div>
 
-    <!-- CARRUSEL -->
-    <section class="carousel-section">
-      <h2>Más Solicitado</h2>
-      <div class="carousel-container" id="carousel">
-        <div class="carousel-slides">
+<!-- CARRUSEL -->
+  <section class="carousel-section">
+    <h2>Más Solicitado</h2>
+    <div class="carousel-container" id="carousel">
+    <div class="carousel-slides">
 
-          <div class="slide">
-            <img src="img/remera-dryfit-h.webp" alt="Remera Dryfit Hombre">
-            <div class="carousel-caption">
-              <h3>Remera Dryfit Hombre</h3>
-              <p class="Precio">$25.000</p>
-            </div>
-          </div>
-
-          <div class="slide">
-            <img src="img/campera-lycra.jpg" alt="Campera Lycra FEM">
-            <div class="carousel-caption">
-              <h3>Campera Lycra FEM</h3>
-              <p class="Precio">$25.000</p>
-            </div>
-          </div>
-
-          <div class="slide">
-            <img src="img/calza-oxford.webp" alt="Calza Oxford">
-            <div class="carousel-caption">
-              <h3>Calza Oxford</h3>
-              <p class="Precio">$20.000</p>
-            </div>
-          </div>
-
-        </div>
-
-        <button class="carousel-btn prev" id="prevBtn" aria-label="Imagen anterior">&#171;</button>
-        <button class="carousel-btn next" id="nextBtn" aria-label="Siguiente imagen">&#187;</button>
-
-        <div class="carousel-dots">
-          <span class="dot active"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-        </div>
+<div class="slide">
+    <img src="img/remera-dryfit-h.webp" alt="Remera Dryfit Hombre">
+    <div class="carousel-caption">
+    <h3>Remera Dryfit Hombre</h3>
+    <p class="Precio">$25.000</p>
       </div>
-    </section>
+</div>
 
-    <!-- SECCIÓN MUJER -->
-    <p class="Destacado">SECCIÓN MUJER</p>
+<div class="slide">
+    <img src="img/campera-lycra.jpg" alt="Campera Lycra FEM">
+    <div class="carousel-caption">
+    <h3>Campera Lycra FEM</h3>
+    <p class="Precio">$25.000</p>
+    </div>
+</div>
 
-    <section id="Remeras" class="seccion-productos">
-      <h2>Remeras</h2>
-      <div class="productos">
-        <figure class="producto">
+<div class="slide">
+      <img src="img/calza-oxford.webp" alt="Calza Oxford">
+      <div class="carousel-caption">
+      <h3>Calza Oxford</h3>
+      <p class="Precio">$20.000</p>
+  </div>
+</div>
+
+</div>
+
+  <button class="carousel-btn prev" id="prevBtn" aria-label="Imagen anterior">&#171;</button>
+  <button class="carousel-btn next" id="nextBtn" aria-label="Siguiente imagen">&#187;</button>
+
+<div class="carousel-dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+      </div>
+    </div>
+</section>
+
+<!-- SECCIÓN MUJER -->
+  <p class="Destacado">SECCIÓN MUJER</p>
+
+  <section id="Remeras" class="seccion-productos">
+    <h2>Remeras</h2>
+    <div class="productos">
+    <figure class="producto">
           <img src="img/remera-algodon.webp" alt="Remera Estampada">
           <figcaption>Remera Estampada</figcaption>
           <p class="Precio">$14.000</p>
@@ -185,11 +192,16 @@
           <img src="img/calza-corta-3.webp" alt="Calza Corta Booty">
           <figcaption>Calza Corta Booty</figcaption>
           <p class="Precio">$14.000</p>
-        </figure>
+          <figure class="producto">
+            <img src="img/calza-seamless.webp" alt="Calza Seamless">
+            <figcaption>Calza Corta Seamless</figcaption>
+            <p class="Precio">$12.000</p>
+          </figure>
+          </figure>
       </div>
-    </section>
+</section>
 
-    <!-- TESTIMONIOS -->
+<!-- TESTIMONIOS -->
     <section id="Testimonios" class="testimonios">
       <h2>Testimonios</h2>
       <img class="testimonio-img" src="img/testimonio1.png" alt="Testimonio 1">
@@ -239,86 +251,103 @@
       </div>
     </section>
 
-    <section id="Abrigos" class="seccion-productos">
-      <h2>Abrigos</h2>
-      <div class="productos">
-        <figure class="producto">
-          <img src="img/chaleco.webp" alt="Chaleco TNF">
-          <figcaption>Chaleco TNF</figcaption>
-          <p class="Precio">$35.000</p>
+<section id="Abrigos" class="seccion-productos">
+    <h2>Abrigos</h2>
+    <div class="productos">
+    <figure class="producto">
+    <img src="img/chaleco.webp" alt="Chaleco TNF">
+     <figcaption>Chaleco TNF</figcaption>
+      <p class="Precio">$35.000</p>
+      </figure>
+      <figure class="producto">
+      <img src="img/campera-1.webp" alt="Campera VLREN Unisex">
+      <figcaption>Campera VLREN Unisex</figcaption>
+      <p class="Precio">$40.000</p>
+      </figure>
+      <figure class="producto">
+        <img src="img/rompevientos.webp" alt="Rompevientos">
+        <figcaption>Rompevientos</figcaption>
+        <p class="Precio">$40.000</p>
         </figure>
         <figure class="producto">
-          <img src="img/campera-1.webp" alt="Campera VLREN Unisex">
-          <figcaption>Campera VLREN Unisex</figcaption>
-          <p class="Precio">$40.000</p>
+          <img src="img/chaleco.reversible-h.webp" alt="Chaleco Reversible">
+          <figcaption>Chaleco Reversible</figcaption>
+          <p class="Precio">$30.000</p>
         </figure>
-        <figure class="producto">
-          <img src="img/rompevientos.webp" alt="Rompevientos">
-          <figcaption>Rompevientos</figcaption>
-          <p class="Precio">$40.000</p>
+
         </figure>
       </div>
-    </section>
+</section>
 
     <!--3 TEXTOS-->
-    <div class="tres-textos">
-      <h1 id="textoInformativo">💵 ACEPTAMOS TODOS LOS MEDIOS DE PAGO 💵</h1>
-      <button id="botonCambiar">Cambiar texto</button>
+<div class="tres-textos">
+    <h1 id="textoInformativo">💵 ACEPTAMOS TODOS LOS MEDIOS DE PAGO 💵</h1>
+    <button id="botonCambiar">Cambiar texto</button>
     </div>
 
     <!-- ACCESORIOS -->
-    <p class="Destacado">ACCESORIOS</p>
+<p class="Destacado">ACCESORIOS</p>
 
     <section id="Bolso-Mochila" class="seccion-productos">
-      <h2>Bolso Mochila</h2>
-      <div class="productos producto-unico">
-        <figure class="producto">
-          <img class="bolso" src="img/bolso-mochila.webp" alt="Bolso Mochila">
-          <figcaption>Bolso Mochila</figcaption>
-          <p class="Precio">$40.000</p>
+    <h2>Bolso Mochila</h2>
+    <div class="productos">
+    <figure class="producto">
+    <img class="bolso" src="img/bolso-mochila.webp" alt="Bolso Mochila">
+    <figcaption>Bolso Mochila</figcaption>
+    <p class="Precio">$40.000</p>
+      <figure class="producto">
+        <img src="img/bolso-mano.webp" alt="Bolso de mano">
+        <figcaption>Bolso De Mano</figcaption>
+        <p class="Precio">$30.000</p>
+    </figure>
         </figure>
       </div>
-    </section>
+</section>
 
-    <div class="fondo-video-bolso">
-      <video class="video-producto" controls>
-        <source src="img/bolsomochila.mp4" type="video/mp4">
-      </video>
+<div class="fondo-video-bolso">
+    <video class="video-producto" controls>
+    <source src="img/bolsomochila.mp4" type="video/mp4">
+    </video>
     </div>
 
-    <section id="Botellas" class="seccion-productos">
+<section id="Botellas" class="seccion-productos">
       <h2>Botellas</h2>
-      <div class="productos producto-unico">
-        <figure class="producto">
-          <img src="img/botellas.webp" alt="Botellas">
-          <figcaption>Botellas</figcaption>
-          <p class="Precio">$15.500</p>
+      <div class="productos">
+      <figure class="producto">
+      <img src="img/botellas.webp" alt="Botellas">
+      <figcaption>Botellas</figcaption>
+        <p class="Precio">$15.500</p>
+        </figure>
+          <figure class="producto">
+            <img src="img/vaso-termico.webp" alt="Vaso Termico">
+            <figcaption>Vaso Termico</figcaption>
+            <p class="Precio">$17.000</p>
         </figure>
       </div>
-    </section>
+</section>
 
     <!--REGRESAR AL INICIO-->
-    <button id="volverArriba">Regresa al inicio</button>
+<button id="volverArriba">Regresa al inicio</button>
     
 
     <!-- QUIÉNES SOMOS -->
-    <section id="Quienes-Somos">
+<section id="Quienes-Somos">
       <div class="quienes">
-        <img src="img/quienes-somos.png" alt="Quiénes Somos">
+      <img src="img/quienes-somos.png" alt="Quiénes Somos">
       </div>
       <p class="oculto texto-extra">Basis Sport es un espacio dedicado a la indumentaria y los accesorios deportivos. Buscamos ofrecer productos cómodos y funcionales para acompañar a nuestros clientes durante sus entrenamientos y actividades diarias.</p>
       <button class="boton-ver-mas">Ver más</button>
-    </section>
+</section>
 
     <!-- MÁS INFO -->
-    <section id="Mas-Info">
-      <h3>Mas Info</h3>
-      <p class="oculto texto-extra">Para realizar consultas sobre productos, talles, colores y disponibilidad podés comunicarte con Basis Sport. También contamos con opciones de retiro y entrega según la ubicación del cliente.</p>
-      <button class="boton-ver-mas">Ver más</button>
+<section id="Mas-Info">
+    <h3>Mas Info</h3>
+    <p class="oculto texto-extra">Para realizar consultas sobre productos, talles, colores y disponibilidad podés comunicarte con Basis Sport. También contamos con opciones de retiro y entrega según la ubicación del cliente.</p>
+    <button class="boton-ver-mas">Ver más</button>
     </section>
-  </main>
+</main>
 
-  <h2 class="consulta">REALIZA TU CONSULTA O DUDA</h2>
+<h2 class="consulta">REALIZA TU CONSULTA O DUDA</h2>
 
   <div class="contenedor">
     <form id="formulario">
@@ -335,22 +364,22 @@
 
       <p id="resultado"></p>
     </form>
-  </div>
+</div>
 
   <!-- FOOTER -->
-  <footer>
+<footer>
     <div class="footer-botones">
       <details>
-        <summary>NUESTRAS REDES</summary>
-        <a href="https://www.instagram.com/basissportok/?next=%2F&hl=es" class="redicc">Instagram</a>
+      <summary>NUESTRAS REDES</summary>
+      <a href="https://www.instagram.com/basissportok/?next=%2F&hl=es" class="redicc">Instagram</a>
       </details>
       <details>
-        <summary>HACE TU COMPRA</summary>
-        <a href="https://www.facebook.com/marketplace/profile/100001506048619/?locale=es_LA" class="redicc">Marketplace</a>
+      <summary>HACE TU COMPRA</summary>
+      <a href="https://www.facebook.com/marketplace/profile/100001506048619/?locale=es_LA" class="redicc">Marketplace</a>
       </details>
     </div>
     <p class="Copy">&copy; Copyright de Basis Sport - 2026 - Todos los derechos reservados</p>
-  </footer>
+</footer>
 
 </body>
 
