@@ -31,7 +31,7 @@ body {
 
 }
 
-header, .navbar, footer, .testimonios, .fondo-video-bolso {
+header, .navbar, footer, .testimonios {
   background-color: var(--header-bg);
 }
 
@@ -47,7 +47,7 @@ header img {
   display: inline-block;
 }
 
-/* FOTO FIJA */
+/* PORTADA */
 .portada {
   background-image: url(img/catalogobanner.webp);
   background-attachment: fixed;
@@ -61,14 +61,14 @@ header img {
   text-align: center;
 }
 
-.portada::before{
+.portada::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgb(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .portada-contenido {
@@ -78,8 +78,7 @@ header img {
   color: var(--title-color);
   padding: 0 40px;
 }
-
-.portada-contenido h2{
+.portada-contenido h2 {
   font-size: 2.5rem;
   color: var(--title-color);
   margin-bottom: 10px;
@@ -87,17 +86,13 @@ header img {
 }
 
 .portada-contenido p {
-  font-family:fantasy;
+  font-family: monospace;
   font-weight: bolder;
   font-size: 30px;
   text-shadow: 0 2px 4px #000;
 }
 
-.top-controls {
-  display: flex;
-  justify-content: flex-end;
-  padding: 15px 2rem;
-}
+
 
 /* MENÚ DE NAVEGACIÓN */
 .menu-principal {
@@ -162,20 +157,42 @@ header img {
   white-space: nowrap;
 }
 
-/* TITULO Y VIDEOS */
+/* TAMAÑO LETRA Y MODO OSCURO */
+.botones-tamaño {
+  text-align: center;
+}
+
+/* TITULOS Y VIDEOS */
 h1 {
   text-align: center;
   padding: 0 15px;
 }
 
-.intro, .fondo-video-bolso {
+.intro {
   text-align: center;
   padding: 20px 0;
 }
 
-video {
-  max-width: 20%;
+.intro video {
+  max-width: 250px;
+  width: 100%;
   height: auto;
+  border-radius: 10px;
+}
+
+.fondo-video-bolso {
+  text-align: center;
+  padding: 20px 15px;
+  margin: 30px auto;
+  max-width: 800px;
+}
+
+.fondo-video-bolso video {
+  max-width: 280px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* CARRUSEL */
@@ -192,7 +209,7 @@ video {
 
 .carousel-container {
   position: relative;
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
   overflow: hidden;
   border-radius: 12px;
@@ -202,13 +219,14 @@ video {
 
 .carousel-slides {
   position: relative;
-  height: 450px;
+  height: 800px;
 }
 
 .slide img {
   width: 100%;
-  height: 450px;
+  height: 800px;
   object-fit: cover;
+  object-position: center;
   display: block;
 }
 
@@ -218,17 +236,12 @@ video {
   width: 100%;
   background: rgba(0, 0, 0, 0.6);
   color: #ffffff;
-  padding: 15px 0;
+  padding: 10px 0;
 }
 
 .carousel-caption h3 {
   margin: 0 0 4px 0;
-  font-size: 1.5rem;
-}
-
-.carousel-caption p {
-  margin: 0;
-  font-size: 0.95rem;
+  font-size: 1.3rem;
 }
 
 .carousel-btn {
@@ -252,7 +265,7 @@ video {
 .carousel-btn.prev { left: 15px; }
 .carousel-btn.next { right: 15px; }
 
-/* PRODUCTOS Y SECCIONES */
+/* SECCIONES Y PRODUCTOS */
 .seccion-productos {
   width: 90%;
   max-width: 800px;
@@ -279,6 +292,9 @@ video {
   width: 100%;
   max-width: 300px;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .producto img {
@@ -292,6 +308,7 @@ video {
 .imagenes-dobles {
   display: flex;
   gap: 5px;
+  width: 100%;
 }
 
 .imagenes-dobles img {
@@ -306,11 +323,38 @@ figcaption {
   margin-top: 15px;
 }
 
-.Precio {
-  color: rgb(5, 161, 83);
-  font-size: 20px;
+/* PRECIOS Y STOCK */
+.precio-original {
+  color: #888888;
+  font-size: 14px;
+  margin: 5px 0 2px 0;
+}
+
+.cuotas {
+  font-size: 11px;
+  color: #8b5a2b;
   font-weight: bold;
-  margin-top: 8px;
+  margin: 2px 0;
+}
+
+.precio-oferta {
+  color: #05a153;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 4px 0 6px 0;
+}
+
+/* INDICADOR DE STOCK */
+.stock {
+  font-size: 13px;
+  font-weight: bold;
+  color: #d9534f;
+  background-color: #fdf2f2;
+  border: 1px dashed #d9534f;
+  padding: 4px 10px;
+  border-radius: 12px;
+  margin: 5px 0;
+  display: inline-block;
 }
 
 .Destacado {
@@ -328,7 +372,7 @@ figcaption {
   width: fit-content;
 }
 
-/* TESTIMONIOS Y TEXTOS OCULTOS */
+/* TESTIMONIOS */
 .testimonios {
   text-align: center;
   padding: 30px 15px;
@@ -444,29 +488,17 @@ footer {
 form {
   display: flex;
   flex-direction: column;
+
 }
 
-/* CONSULTAS O DUDAS */
+
 
 .consulta {
   text-align: center;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
   text-decoration: underline;
+
 }
-
-/* 3 TEXTOS BOTON */
-
-.contenedor-anuncio {
-  max-width: 600px; 
-  text-align: center;
-}
-
-#textoInformativo {
-  font-size: 20px; 
-  margin-bottom: 15px;
-}
-
-/* CAMBIAR 3 TEXTOS */
 
 .tres-textos {
   color: #ffffff;
