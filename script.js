@@ -159,7 +159,7 @@ if (botonAnuncio && textoAnuncio) {
     } else if (contador === 2) {
       textoAnuncio.textContent = "🚚 CONTAMOS CON ENVÍOS DENTRO DE CÓRDOBA 🚚";
     } else if (contador === 3) {
-      textoAnuncio.textContent = "💵 ACEPTAMOS TODO MEDIO DE PAGO 💵";
+      textoAnuncio.textContent = "💵 ACEPTAMOS TODOS LOS MEDIOS DE PAGO 💵";
       contador = 0; 
     }
   });
