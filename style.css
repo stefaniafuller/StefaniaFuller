@@ -50,6 +50,7 @@ header img {
   top: 0px;
   position: sticky;
   z-index: 3;
+
 }
 
 /* PORTADA */
@@ -89,10 +90,11 @@ header img {
   font-style: italic;
   font-weight: 900;
   font-family: cursive;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   color: var(--title-color);
   margin-bottom: 10px;
   text-shadow: 0 8px 8px #000;
+  line-height: 1;
    text-decoration: underline; color: whitesmoke;
    text-decoration-color: var(--title-color);
 }
@@ -100,8 +102,9 @@ header img {
 .portada-contenido p {
   font-family: cursive;
   font-weight: bolder;
-  font-size: 30px;
+  font-size: 1.2rem;
   text-shadow: 0 8px 8px #000;
+  line-height: 1.8;
 }
 
 
@@ -111,14 +114,15 @@ header img {
   width: 100%; 
   position: sticky;
   z-index: 3;
+
 }
 
 .menu-principal {
   display: flex;
   justify-content: center;
   list-style: none;
-  gap: 10px;
-  padding: 0 20px;
+  gap: 15px;
+  padding: 0 5px;
   margin: 0;
 }
 
@@ -177,7 +181,11 @@ header img {
 
 /* TAMAÑO LETRA Y MODO OSCURO */
 .botones-tamaño {
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 15px;
 }
 
 /* TITULOS Y VIDEOS */
@@ -299,9 +307,11 @@ h1 {
 
 .productos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  grid-template-columns: 1 fr 1 fr;
+  grid-template-columns: repeat(2, minmax(150px, 1fr));
+  gap: 50px;
   justify-items: center;
+  justify-content: space-evenly;
 
 }
 
@@ -323,15 +333,6 @@ h1 {
   border-radius: 8px;
 }
 
-.imagenes-dobles {
-  display: flex;
-  gap: 5px;
-  width: 100%;
-}
-
-.imagenes-dobles img {
-  width: 50%;
-}
 
 figcaption {
   font-family: 'Montserrat', sans-serif;
