@@ -19,22 +19,26 @@ body.dark-mode {
   --button-text: #000000;
 }
 
+/* EVITA DESBORDE EN CELULARES */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
   font-family: Arial, sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
-
 }
 
 header, .navbar, footer, .testimonios {
   background-color: var(--header-bg);
 }
 
+/* CABECERA */
 .main-header {
   position: sticky;
   top: 0;
@@ -80,11 +84,9 @@ header, .navbar, footer, .testimonios {
   border-radius: 3px;
 }
 
+/* MENÚ EN ESCRITORIO */
 .navbar {
-  width: 100%;
-  position: sticky;
-  top: 0px;
-  z-index: 3;
+  width: auto;
 }
 
 .menu-principal {
@@ -152,57 +154,7 @@ header, .navbar, footer, .testimonios {
   white-space: nowrap;
 }
 
-@media (max-width: 991px) {
-  .hamburger {
-    display: flex;
-  }
-
-  .navbar {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: var(--header-bg);
-    display: none;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
-  }
-
-  .menu-checkbox:checked ~ .navbar {
-    display: block;
-  }
-
-  .menu-principal {
-    flex-direction: column;
-    gap: 0;
-    padding: 10px 0;
-  }
-
-  .menu-principal a {
-    padding: 15px 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .submenu, .submenu-2 {
-    position: static;
-    box-shadow: none;
-    background-color: rgba(0, 0, 0, 0.15);
-    padding-left: 15px;
-    display: none;
-  }
-
-  .dropdown:hover > .submenu,
-  .dropdown-submenu:hover > .submenu-2 {
-    display: none;
-  }
-
-  .dropdown:active > .submenu,
-  .dropdown-submenu:active > .submenu-2,
-  .dropdown:focus-within > .submenu,
-  .dropdown-submenu:focus-within > .submenu-2 {
-    display: block;
-  }
-}
-
+/* PORTADA */
 .portada {
   background-image: url(img/catalogobanner.webp);
   background-attachment: fixed;
@@ -219,10 +171,7 @@ header, .navbar, footer, .testimonios {
 .portada::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
   background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -232,9 +181,7 @@ header, .navbar, footer, .testimonios {
   position: relative;
   z-index: 1;
   padding: 0 40px;
-  text-decoration: underline; 
   color: whitesmoke;
-  text-decoration-color: var(--title-color);
 }
 
 .portada-contenido h2 {
@@ -246,9 +193,6 @@ header, .navbar, footer, .testimonios {
   margin-bottom: 10px;
   text-shadow: 0 8px 8px #000;
   line-height: 1;
-  text-decoration: underline; 
-  color: whitesmoke;
-  text-decoration-color: var(--title-color);
 }
 
 .portada-contenido p {
@@ -259,8 +203,7 @@ header, .navbar, footer, .testimonios {
   line-height: 1.8;
 }
 
-
-
+/* ACCESIBILIDAD Y TÍTULOS */
 .botones-tamaño {
   display: flex;
   flex-wrap: wrap;
@@ -268,7 +211,6 @@ header, .navbar, footer, .testimonios {
   gap: 8px;
   margin: 15px;
 }
-
 
 h1 {
   text-align: center;
@@ -302,7 +244,7 @@ h1 {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-
+/* CARRUSEL */
 .carousel-section {
   margin: 30px 0;
   text-align: center;
@@ -327,12 +269,12 @@ h1 {
 
 .carousel-slides {
   position: relative;
-  height: 800px;
+  height: 500px;
 }
 
 .slide img {
   width: 100%;
-  height: 800px;
+  height: 500px;
   object-fit: cover;
   object-position: center;
   display: block;
@@ -366,16 +308,42 @@ h1 {
   z-index: 10;
 }
 
-.carousel-btn:hover {
-  background-color: rgba(0, 0, 0, 0.85);
-}
-
 .carousel-btn.prev { left: 15px; }
 .carousel-btn.next { right: 15px; }
 
+/* SECCIONES Y PRODUCTOS */
+.seccion-con-aside {
+  display: flex;
+  max-width: 1200px;
+  margin: 40px auto;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.invertir-orden {
+  flex-direction: row-reverse;
+}
+
+.aside-lateral {
+  flex: 0 0 250px;
+}
+
+.aside-lateral img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  object-fit: cover;
+}
+
+.contenido-principal {
+  flex: 1;
+}
 
 .seccion-productos {
-  width: 90%;
+  width: 100%;
   max-width: 800px;
   margin: 40px auto;
   text-align: center;
@@ -389,16 +357,12 @@ h1 {
 
 .productos {
   display: grid;
-
-  grid-template-columns: repeat(2, minmax(150px, 1fr));
-  gap: 50px;
+  grid-template-columns: repeat(2, minmax(140px, 1fr));
+  gap: 30px;
   justify-items: center;
-  justify-content: space-evenly;
-
 }
 
 .producto {
-
   width: 100%;
   max-width: 300px;
   margin: 0;
@@ -409,12 +373,11 @@ h1 {
 
 .producto img {
   width: 100%;
-  height: 300px;
+  height: 250px;
   object-fit: cover;
   display: block;
   border-radius: 8px;
 }
-
 
 figcaption {
   font-family: 'Montserrat', sans-serif;
@@ -424,27 +387,9 @@ figcaption {
   margin-top: 15px;
 }
 
-
-.precio-original {
-  color: #888888;
-  font-size: 14px;
-  margin: 5px 0 2px 0;
-}
-
-.cuotas {
-  font-size: 11px;
-  color: #8b5a2b;
-  font-weight: bold;
-  margin: 2px 0;
-}
-
-.precio-oferta {
-  color: #05a153;
-  font-size: 22px;
-  font-weight: bold;
-  margin: 4px 0 6px 0;
-}
-
+.precio-original { color: #888888; font-size: 14px; margin: 5px 0 2px 0; }
+.cuotas { font-size: 11px; color: #8b5a2b; font-weight: bold; margin: 2px 0; }
+.precio-oferta { color: #05a153; font-size: 22px; font-weight: bold; margin: 4px 0 6px 0; }
 
 .stock {
   font-size: 13px;
@@ -473,43 +418,12 @@ figcaption {
   width: fit-content;
 }
 
-
-.testimonios {
-  text-align: center;
-  padding: 30px 15px;
-  color: white;
-}
-
-.testimonio-img {
-  display: block;
-  margin: 15px auto;
-  box-shadow: 0 4px 10px var(--title-color);
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.testimonios h4 {
-  max-width: 400px;
-  margin: 10px auto;
-  font-weight: normal;
-}
-
-.oculto {
-  display: none;
-}
-
-.texto-testimonio, .texto-extra {
-  font-size: 20px;
-  padding: 15px;
-  max-width: 700px;
-  margin: 15px auto;
-}
-
+/* TESTIMONIOS, FOOTER Y FORMULARIO */
+.testimonios { text-align: center; padding: 30px 15px; color: white; }
+.testimonio-img { display: block; margin: 15px auto; width: 150px; height: 150px; border-radius: 50%; object-fit: cover; }
+.oculto { display: none; }
 
 button, summary {
-
   border: 2px solid var(--title-color);
   border-radius: 10px;
   padding: 10px 20px;
@@ -519,55 +433,15 @@ button, summary {
   font-weight: bold;
 }
 
-.redicc {
-  color: #ffffff;
-}
+.redicc { color: #ffffff; }
+.redicc:hover { color: red; }
 
-.redicc:hover {
-  color: red;
-}
+#Quienes-Somos, #Mas-Info { text-align: center; margin: 40px auto; }
+.quienes img { width: 100%; max-height: 400px; object-fit: cover; }
 
-.boton-ver-mas {
-  margin-top: 15px;
-}
-
-#Quienes-Somos, #Mas-Info {
-  text-align: center;
-  margin: 40px auto;
-}
-
-.quienes img {
-  width: 100%;
-  max-height: 600px;
-  object-fit: cover;
-}
-
-#Mas-Info h3 {
-  display: inline-block;
-  padding: 10px 20px;
-  border: 2px solid var(--title-color);
-  border-radius: 10px;
-  font-size: 28px;
-  background-color: var(--card-bg);
-}
-
-footer {
-  text-align: center;
-  padding: 20px 0;
-}
-
-.footer-botones {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 15px;
-}
-
-.Copy {
-  font-size: 16px;
-  color: var(--title-color);
-}
-
+footer { text-align: center; padding: 20px 0; }
+.footer-botones { display: flex; justify-content: center; gap: 15px; margin-bottom: 15px; }
+.Copy { font-size: 16px; color: var(--title-color); }
 
 #volverArriba {
   color: #ffffff;
@@ -578,56 +452,102 @@ footer {
   padding: 12px 18px;
   border: none;
   border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
 }
 
 .contenedor {
-  width: 400px;
-  margin: 50px auto;
+  width: 90%;
+  max-width: 400px;
+  margin: 40px auto;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
+form { display: flex; flex-direction: column; }
+.consulta { text-align: center; text-decoration: underline; }
+.tres-textos { color: #ffffff; background-color: var(--header-bg); padding: 20px 0; text-align: center; width: 100%; margin: 20px 0; }
 
-}
+/* ======================================================
+   REGLAS RESPONSIVAS EXCLUSIVAS PARA CELULAR (< 991px)
+   ====================================================== */
+@media (max-width: 991px) {
+  /* Muestra botón hamburguesa */
+  .hamburger {
+    display: flex;
+  }
 
+  /* Oculta la barra desplegable por defecto */
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--header-bg);
+    display: none;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  }
 
+  /* Muestra menú cuando el checkbox se activa al tocar la hamburguesa */
+  .menu-checkbox:checked ~ .navbar {
+    display: block;
+  }
 
-.consulta {
-  text-align: center;
-  font-family: 'Trebuchet MS', Arial, sans-serif;
-  text-decoration: underline;
+  .menu-principal {
+    flex-direction: column;
+    gap: 0;
+    padding: 10px 0;
+  }
 
-}
+  .menu-principal a {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
 
-.tres-textos {
-  color: #ffffff;
-  background-color: var(--header-bg);
-  padding: 20px 0;
-  text-align: center;
-  width: 100%;
-  margin: 20px 0;
-}
+  .submenu, .submenu-2 {
+    position: static;
+    box-shadow: none;
+    background-color: rgba(0, 0, 0, 0.15);
+    padding-left: 15px;
+    display: none;
+  }
 
-/* AJUSTES PARA CELULARES Y TABLETS */
-@media (max-width: 768px) {
+  .dropdown:hover > .submenu,
+  .dropdown-submenu:hover > .submenu-2 {
+    display: none;
+  }
+
+  .dropdown:focus-within > .submenu,
+  .dropdown-submenu:focus-within > .submenu-2 {
+    display: block;
+  }
+
+  /* Ajusta el fondo estirado de la portada en móviles */
   .portada {
     height: 45vh;
     background-attachment: scroll !important;
   }
 
+  .portada-contenido h2 {
+    font-size: 1.3rem;
+  }
+
+  .portada-contenido p {
+    font-size: 0.95rem;
+  }
+
+  /* Ajuste de carrusel e imágenes */
   .carousel-slides, 
   .slide img {
-    height: 320px !important;
+    height: 300px !important;
   }
 
   .producto img {
     height: 180px !important;
   }
 
-  .contenedor {
-    width: 90%;
+  .seccion-con-aside,
+  .invertir-orden {
+    flex-direction: column;
+  }
+
+  .aside-lateral {
+    width: 100%;
   }
 }
