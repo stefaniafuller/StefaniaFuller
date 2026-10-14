@@ -20,7 +20,7 @@ body.dark-mode {
 }
 
 /* EVITA DESBORDE EN CELULARES */
-html, body {
+html {
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -38,18 +38,20 @@ header, .navbar, footer, .testimonios {
   background-color: var(--header-bg);
 }
 
-/* CABECERA */
+/* CABECERA FIJA ABSOLUTA */
 .main-header {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 100;
+  left: 0;
+  width: 100%;
+  z-index: 11;
   background-color: var(--header-bg);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .header-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 10px 20px;
   max-width: 1200px;
@@ -154,7 +156,7 @@ header, .navbar, footer, .testimonios {
   white-space: nowrap;
 }
 
-/* PORTADA */
+/* PORTADA (Con margen superior para compensar la barra fija de ~80px) */
 .portada {
   background-image: url(img/catalogobanner.webp);
   background-attachment: fixed;
@@ -166,6 +168,7 @@ header, .navbar, footer, .testimonios {
   align-items: center;
   position: relative;
   text-align: center;
+  margin-top: 80px; 
 }
 
 .portada::before {
@@ -464,90 +467,41 @@ form { display: flex; flex-direction: column; }
 .consulta { text-align: center; text-decoration: underline; }
 .tres-textos { color: #ffffff; background-color: var(--header-bg); padding: 20px 0; text-align: center; width: 100%; margin: 20px 0; }
 
-/* ======================================================
-   REGLAS RESPONSIVAS EXCLUSIVAS PARA CELULAR (< 991px)
-   ====================================================== */
+/* REGLAS RESPONSIVAS EXCLUSIVAS PARA CELULAR */
+  
 @media (max-width: 991px) {
-  /* Muestra botón hamburguesa */
-  .hamburger {
-    display: flex;
-  }
+  .hamburger { display: flex; }
 
-  /* Oculta la barra desplegable por defecto */
   .navbar {
-    position: absolute;
-    top: 100%;
-    left: 0;
+    position: absolute; 
+    top: 100%; 
+    left: 0; 
     width: 100%;
-    background-color: var(--header-bg);
+    background-color: var(--header-bg); 
     display: none;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
   }
 
-  /* Muestra menú cuando el checkbox se activa al tocar la hamburguesa */
-  .menu-checkbox:checked ~ .navbar {
-    display: block;
-  }
-
-  .menu-principal {
-    flex-direction: column;
-    gap: 0;
-    padding: 10px 0;
-  }
-
-  .menu-principal a {
-    padding: 15px 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
+  .menu-checkbox:checked ~ .navbar { display: block; }
+  .menu-principal { flex-direction: column; gap: 0; padding: 10px 0; }
+  .menu-principal a { padding: 15px 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
 
   .submenu, .submenu-2 {
-    position: static;
-    box-shadow: none;
-    background-color: rgba(0, 0, 0, 0.15);
-    padding-left: 15px;
-    display: none;
+    position: static; box-shadow: none;
+    background-color: rgba(0, 0, 0, 0.15); padding-left: 15px; display: none;
   }
 
-  .dropdown:hover > .submenu,
-  .dropdown-submenu:hover > .submenu-2 {
-    display: none;
-  }
+  .dropdown:hover > .submenu, .dropdown-submenu:hover > .submenu-2 { display: none; }
+  .dropdown:focus-within > .submenu, .dropdown-submenu:focus-within > .submenu-2 { display: block; }
 
-  .dropdown:focus-within > .submenu,
-  .dropdown-submenu:focus-within > .submenu-2 {
-    display: block;
-  }
+  .portada { height: 45vh; background-attachment: scroll; margin-top: 70px; }
+  .portada-contenido h2 { font-size: 1.3rem; }
+  .portada-contenido p { font-size: 0.95rem; }
 
-  /* Ajusta el fondo estirado de la portada en móviles */
-  .portada {
-    height: 45vh;
-    background-attachment: scroll !important;
-  }
+  /* CARRUSEL E IMÁGENES MÁS GRANDES EN CELULAR */
+  .carousel-slides, .slide img { height: 420px; }
+  .producto img { height: 260px; }
 
-  .portada-contenido h2 {
-    font-size: 1.3rem;
-  }
-
-  .portada-contenido p {
-    font-size: 0.95rem;
-  }
-
-  /* Ajuste de carrusel e imágenes */
-  .carousel-slides, 
-  .slide img {
-    height: 300px !important;
-  }
-
-  .producto img {
-    height: 180px !important;
-  }
-
-  .seccion-con-aside,
-  .invertir-orden {
-    flex-direction: column;
-  }
-
-  .aside-lateral {
-    width: 100%;
-  }
+  .seccion-con-aside, .invertir-orden { flex-direction: column; }
+  .aside-lateral { width: 100%; }
 }
