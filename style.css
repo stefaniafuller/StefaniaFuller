@@ -38,7 +38,7 @@ header, .navbar, footer, .testimonios {
   background-color: var(--header-bg);
 }
 
-/* CABECERA FIJA ABSOLUTA */
+/* CABECERA FIJA */
 .main-header {
   position: fixed;
   top: 0;
@@ -156,7 +156,7 @@ header, .navbar, footer, .testimonios {
   white-space: nowrap;
 }
 
-/* PORTADA (Con margen superior para compensar la barra fija de ~80px) */
+/* PORTADA */
 .portada {
   background-image: url(img/catalogobanner.webp);
   background-attachment: fixed;
@@ -206,7 +206,7 @@ header, .navbar, footer, .testimonios {
   line-height: 1.8;
 }
 
-/* ACCESIBILIDAD Y TÍTULOS */
+/* BOTONES AUMENT Y DISMIN Y TÍTULOS */
 .botones-tamaño {
   display: flex;
   flex-wrap: wrap;
@@ -467,7 +467,7 @@ form { display: flex; flex-direction: column; }
 .consulta { text-align: center; text-decoration: underline; }
 .tres-textos { color: #ffffff; background-color: var(--header-bg); padding: 20px 0; text-align: center; width: 100%; margin: 20px 0; }
 
-/* REGLAS RESPONSIVAS EXCLUSIVAS PARA CELULAR */
+/* REGLAS EXCLUSIVAS PARA CELULAR */
   
 @media (max-width: 991px) {
   .hamburger { display: flex; }
