@@ -315,31 +315,7 @@ h1 {
 .carousel-btn.next { right: 15px; }
 
 /* SECCIONES Y PRODUCTOS */
-.seccion-con-aside {
-  display: flex;
-  max-width: 1200px;
-  margin: 40px auto;
-  gap: 20px;
-  align-items: flex-start;
-  padding: 0 15px;
-  box-sizing: border-box;
-}
 
-.invertir-orden {
-  flex-direction: row-reverse;
-}
-
-.aside-lateral {
-  flex: 0 0 250px;
-}
-
-.aside-lateral img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  display: block;
-  object-fit: cover;
-}
 
 .contenido-principal {
   flex: 1;
